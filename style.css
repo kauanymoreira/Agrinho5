@@ -1,1 +1,427 @@
+/* ========== RESET E CONFIGURAÇÕES GLOBAIS ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f5f7f2;
+    color: #1e2a1f;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+/* Container principal com ID específico */
+#container-principal {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ========== HERO SECTION ========== */
+.hero-section {
+    background: linear-gradient(135deg, #2c5e2a 0%, #1d3e1a 100%);
+    border-radius: 0 0 2.5rem 2.5rem;
+    padding: 2rem 0 3rem 0;
+    margin-bottom: 2.5rem;
+    color: white;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+.hero-conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-texto {
+    flex: 1;
+}
+
+.hero-texto h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: rgba(255,255,255,0.2);
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 40px;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.hero-texto p {
+    font-size: 1.1rem;
+    max-width: 90%;
+    opacity: 0.95;
+    margin-bottom: 1.5rem;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #a8e6a3;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.hero-icone {
+    font-size: 6rem;
+    background: rgba(255,255,255,0.1);
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    backdrop-filter: blur(3px);
+}
+
+/* ========== CARDS DE EQUILÍBRIO ========== */
+.equilibrio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.card-equilibrio {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 1.8rem;
+    flex: 1;
+    min-width: 220px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0f0dc;
+}
+
+.card-equilibrio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+}
+
+.card-equilibrio i {
+    font-size: 2.8rem;
+    color: #3d8b37;
+    margin-bottom: 1rem;
+}
+
+.card-equilibrio h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #1e4620;
+}
+
+.card-equilibrio p {
+    color: #4a6741;
+    line-height: 1.5;
+}
+
+/* ========== SEÇÃO DO FORMULÁRIO ========== */
+.form-section {
+    background: #eef5ea;
+    border-radius: 2rem;
+    padding: 2rem 2rem 2.5rem;
+    margin: 2rem 0 3rem;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.03);
+}
+
+.form-section h2 {
+    font-size: 1.9rem;
+    margin-bottom: 0.5rem;
+    color: #1e4620;
+    font-weight: 700;
+}
+
+.sub {
+    margin-bottom: 1.8rem;
+    color: #44633e;
+    font-size: 1rem;
+}
+
+/* Estilos do formulário com IDs específicos */
+#form-sustentabilidade {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.form-group {
+    flex: 1 1 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group.full-width {
+    flex: 1 1 100%;
+}
+
+.form-group label {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #2b4b26;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px 16px;
+    border-radius: 60px;
+    border: 1px solid #cde2c8;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    background: white;
+    transition: all 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #3d8b37;
+    box-shadow: 0 0 0 3px rgba(61,139,55,0.2);
+}
+
+.form-group input[type="range"] {
+    padding: 0;
+}
+
+.range-value {
+    font-size: 0.85rem;
+    color: #44633e;
+    margin-top: 0.25rem;
+}
+
+button {
+    background: linear-gradient(135deg, #2c5e2a 0%, #1d3e1a 100%);
+    border: none;
+    color: white;
+    padding: 12px 32px;
+    border-radius: 60px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Inter', sans-serif;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Painel de resultados com ID específico */
+#resultado-painel {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    margin-top: 1.8rem;
+    border-left: 6px solid #3d8b37;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+    animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.resultado-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.resultado-card h3 {
+    color: #2c5e2a;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.score-highlight {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #2b6e28;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.impacto-badge {
+    display: inline-block;
+    background: #e9f5e6;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    width: fit-content;
+}
+
+/* ========== SEÇÃO DE DICAS ========== */
+.dicas-sustentaveis {
+    background: #fcf9e8;
+    border-radius: 1.5rem;
+    padding: 1.8rem 2rem;
+    margin: 2rem 0;
+    border: 1px solid #e9e3b0;
+}
+
+.dicas-sustentaveis h3 {
+    font-size: 1.6rem;
+    color: #5a4e2a;
+    margin-bottom: 1rem;
+}
+
+.dicas-sustentaveis h3 i {
+    margin-right: 8px;
+    color: #6b8c4a;
+}
+
+/* Lista de dicas com ID específico */
+#lista-dicas {
+    margin-top: 1rem;
+    list-style-type: none;
+}
+
+#lista-dicas li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0.5rem;
+    background: rgba(255,255,255,0.5);
+    border-radius: 12px;
+    transition: background 0.2s;
+}
+
+#lista-dicas li:hover {
+    background: white;
+}
+
+#lista-dicas li i {
+    color: #3d8b37;
+    width: 24px;
+    font-size: 1.1rem;
+}
+
+/* Botão nova dica com ID específico */
+#btn-nova-dica {
+    background: #8bae6e;
+    margin-top: 1rem;
+    background: linear-gradient(135deg, #6b8c4a 0%, #5a7a3a 100%);
+}
+
+/* ========== FOOTER ========== */
+footer {
+    text-align: center;
+    padding: 2rem 0 2rem;
+    border-top: 1px solid #ddecd8;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #4f6b49;
+}
+
+footer p:first-child {
+    margin-bottom: 0.5rem;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 768px) {
+    #container-principal {
+        padding: 0 16px;
+    }
+    
+    .hero-texto h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-texto p {
+        max-width: 100%;
+    }
+    
+    .hero-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-stats {
+        justify-content: center;
+    }
+    
+    .hero-icone {
+        width: 100px;
+        height: 100px;
+        font-size: 4rem;
+    }
+    
+    .form-group {
+        flex: 1 1 100%;
+    }
+    
+    .equilibrio-grid {
+        gap: 1rem;
+    }
+    
+    .card-equilibrio {
+        min-width: 100%;
+    }
+    
+    .stat-number {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-texto h1 {
+        font-size: 1.6rem;
+    }
+    
+    .form-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .score-highlight {
+        font-size: 1.6rem;
+    }
+}
