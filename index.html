@@ -1,1 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Agro Forte | Futuro Sustentável</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container-principal">
+        <!-- Cabeçalho Hero -->
+        <div class="hero-section">
+            <div class="hero-conteudo">
+                <div class="hero-texto">
+                    <span class="tagline">
+                        <i class="fas fa-leaf"></i> Agro Forte · Futuro Sustentável
+                    </span>
+                    <h1>Equilíbrio entre <br>Produção e Meio Ambiente</h1>
+                    <p>Produzir com inteligência, conservar com responsabilidade. Tecnologia, regeneração e respeito à terra para alimentar o mundo e preservar o amanhã.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">+40%</span>
+                            <span class="stat-label">Produtividade sustentável</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">-30%</span>
+                            <span class="stat-label">Emissões de carbono</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-icone">
+                    <i class="fas fa-tractor"></i>
+                </div>
+            </div>
+        </div>
 
+        <!-- Cards de Equilíbrio -->
+        <div class="equilibrio-grid">
+            <div class="card-equilibrio" id="card-solo">
+                <i class="fas fa-seedling"></i>
+                <h3>Solo Vivo</h3>
+                <p>Práticas como plantio direto e rotação de culturas recuperam matéria orgânica e sequestram carbono.</p>
+            </div>
+            <div class="card-equilibrio" id="card-agua">
+                <i class="fas fa-water"></i>
+                <h3>Uso Eficiente da Água</h3>
+                <p>Irrigação de precisão e captação de água da chuva reduzem impacto hídrico na produção.</p>
+            </div>
+            <div class="card-equilibrio" id="card-bio">
+                <i class="fas fa-bug"></i>
+                <h3>Controle Biológico</h3>
+                <p>Menos químicos, mais inimigos naturais: equilíbrio sustentável que aumenta a produtividade.</p>
+            </div>
+            <div class="card-equilibrio" id="card-energia">
+                <i class="fas fa-solar-panel"></i>
+                <h3>Energia Limpa</h3>
+                <p>Biogás e energia solar no campo reduzem emissões e custos.</p>
+            </div>
+        </div>
+
+        <!-- Formulário Semântico de Avaliação -->
+        <div class="form-section">
+            <h2><i class="fas fa-chart-line"></i> Calculadora de Impacto Sustentável</h2>
+            <p class="sub">Informe as práticas da sua propriedade. Avaliamos o equilíbrio entre produção e meio ambiente.</p>
+            
+            <form id="form-sustentabilidade">
+                <div class="form-group">
+                    <label for="area-produtiva">
+                        <i class="fas fa-map-marker-alt"></i> Área produtiva (hectares)
+                    </label>
+                    <input type="number" id="area-produtiva" name="area" value="50" step="1" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tecnicas">
+                        <i class="fas fa-leaf"></i> Prática de manejo principal
+                    </label>
+                    <select id="tecnicas" required>
+                        <option value="alta">Agricultura Regenerativa (alta sustentabilidade)</option>
+                        <option value="media">Integração Lavoura-Pecuária (médio impacto)</option>
+                        <option value="baixa">Manejo Convencional (oportunidades de melhoria)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="reflorestamento">
+                        <i class="fas fa-tree"></i> Percentual de APP/RPP regenerada
+                    </label>
+                    <input type="number" id="reflorestamento" value="15" min="0" max="100" step="5">
+                </div>
+
+                <div class="form-group">
+                    <label for="agrotoxico">
+                        <i class="fas fa-flask"></i> Uso de defensivos (0 = baixo, 10 = alto)
+                    </label>
+                    <input type="range" id="agrotoxico" min="0" max="10" value="4" step="1">
+                    <span id="valor-defensivo" class="range-value">4 / 10 (moderado)</span>
+                </div>
+
+                <div class="form-group full-width">
+                    <button type="submit" id="btn-calcular">
+                        <i class="fas fa-calculator"></i> Calcular Índice Agro Sustentável
+                    </button>
+                </div>
+            </form>
+            
+            <!-- Painel de Resultados (manipulado via JS) -->
+            <div id="resultado-painel" style="display: none;"></div>
+        </div>
+
+        <!-- Seção de Dicas Interativas -->
+        <div class="dicas-sustentaveis">
+            <h3><i class="fas fa-lightbulb"></i> Dicas práticas para o agro sustentável</h3>
+            <ul id="lista-dicas">
+                <li><i class="fas fa-check-circle"></i> Adote sistemas agroflorestais (SAF) para sombreamento e biodiversidade.</li>
+                <li><i class="fas fa-check-circle"></i> Utilize bioinsumos e reduza a dependência de químicos sintéticos.</li>
+                <li><i class="fas fa-check-circle"></i> Invista em energia solar para bombeamento e armazenagem.</li>
+                <li><i class="fas fa-check-circle"></i> Mantenha corredores ecológicos entre áreas de cultivo.</li>
+            </ul>
+            <button id="btn-nova-dica">
+                <i class="fas fa-plus-circle"></i> Gerar nova dica sustentável
+            </button>
+        </div>
+        
+        <footer>
+            <p>🌱 Agro Forte, Futuro Sustentável — Produção e Meio Ambiente em harmonia. © 2025</p>
+            <p><small>Agricultura que alimenta o mundo e respeita o planeta</small></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
