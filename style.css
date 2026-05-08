@@ -22,6 +22,13 @@ body {
 
 /* ========== HERO SECTION ========== */
 .hero-section {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    /* Mantenha o resto das suas propriedades */
     background: linear-gradient(135deg, #2c5e2a 0%, #1d3e1a 100%);
     border-radius: 0 0 2.5rem 2.5rem;
     padding: 2rem 0 3rem 0;
@@ -29,7 +36,6 @@ body {
     color: white;
     box-shadow: 0 12px 24px rgba(0,0,0,0.1);
 }
-
 .hero-conteudo {
     display: flex;
     flex-wrap: wrap;
